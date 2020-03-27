@@ -8,7 +8,7 @@ body {
     flex: 1 0 auto;
   }
 
-  
+
 h2{
     color: #000000d2;
 }
@@ -58,19 +58,23 @@ p{
 
 .btn-flat{
     color:  var(--secundary-color)!important;
+    position: initial!important;
 }
 
 .btn{
     background-color: var(--main-bg-color);
+    position: initial!important;
 
 }
 .btn-small{
     background-color: var(--main-bg-color);
+    position: initial!important;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: var(--main-bg-2-color);
     color: rgb(255, 255, 255);
+    position: initial!important;
 }
 
 
@@ -141,4 +145,6 @@ label {
   .icon:hover {
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
   }
+  
+
   
