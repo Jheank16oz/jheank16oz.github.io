@@ -1,4 +1,3 @@
-
 var latlng = new google.maps.LatLng(19.9974533,73.7898023); //Set the default location of map
 var map;
 map = new GMaps({
@@ -18,13 +17,7 @@ map = new GMaps({
 GMaps.geolocate({
     success: function(position) {
     map.setCenter(position.coords.latitude, position.coords.longitude);
-      latlng.
-    
-    google.maps.event.addListener(marker, 'dragend', function(a) {
-        console.log(a);
-        document.getElementById('loc').value = a.latLng.lat().toFixed(4) + ', ' + a.latLng.lng().toFixed(4); //Place the value in input box
-    });
-    
+
     },
     error: function(error) {
       alert('Geolocation failed: '+error.message);
