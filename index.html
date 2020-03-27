@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#004ba0" />
+    <meta name="description" content="App monitoring">
+
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css">
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgTs9WuiggGf9glfAyzSXgI96O0kF_N1Q&amp;libraries=geometry"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.9/gmaps.min.js"></script>
+    <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
+
+</head>
+<body >
+
+
+  <div class="container">
+    <ul class="stepper linear demos" id="api_nav_demo">
+      <li class="step">
+         <div data-step-label="Ingresa tu información" class="step-title waves-effect waves-dark">Paso 1</div>
+         <div class="step-content" style="">
+  
+            <div class="row">
+              <br>
+              <p class="title1">Tu Ubicación & Contacto</p>
+              <p class="body1">Confirma la dirección de tu ubicación y
+                teléfono, se usará para informar a los equipos
+                de salud, en caso de requerir atención
+                médica en tu lugar de residencia.</p>
+            </div>
+    
+            <div id="map">Map</div>
+            <br>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="direccion" placeholder="Dirección" class="materialize-textarea" data-length="120"></textarea>
+                <label for="direccion" class="active">Dirección</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="telephone" placeholder="+57 Teléfono" type="tel" class="validate">
+                <label for="telephone" class="active">Teléfono</label>
+              </div>
+            <div class="step-actions col s12">
+               <button class="waves-effect waves-dark btn blue next-step">CONTINUAR</button>
+            </div>
+         </div>
+      </li>
+      <li class="step">
+         <div data-step-label="Configura tus horarios" class="step-title waves-effect waves-dark">Paso 2</div>
+         <div class="step-content">
+  
+            <div class="row">
+              <br>
+              <p class="title1">Configurar horarios</p>
+              <p class="body1">Asigna las horas en las que vas a realizar la
+                lectura de los monitoreos a cada uno de los
+                familiares con los que convives actualmente</p>
+        
+                <div class="col s12">
+                  <p class="col s6">Monitoreo mañana</p>
+                  <input type="text" class="timepicker col s6" value="08:00 AM">
+                </div>
+                
+                <div class="col s12">
+                  <p class="col s6">Monitoreo mediodia</p>
+                  <input type="text" class="timepicker col s6" value="12:30 PM">
+                </div>
+        
+                <div class="col s12">
+                  <p class="col s6">Monitoreo noche</p>
+                  <input type="text" class="timepicker col s6" value="08:00 PM">
+                </div>
+        
+          </div>
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn blue next-step">CONTINUAR</button>
+               <button class="waves-effect waves-dark btn-flat previous-step">ATRAS</button>
+            </div>
+         </div>
+      </li>
+      <li class="step">
+         <div class="step-title waves-effect waves-dark">Step 3</div>
+         <div class="step-content">
+          <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+          <h4>Registro exitoso</h4>
+          <p>Se registró la información correctamente</p>
+            <div class="step-actions">
+               <button class="waves-effect waves-dark btn blue" type="submit">Comenzar</button>
+            </div>
+         </div>
+      </li>
+   </ul>
+  </div>
+  
+    
+
+  <script src="assets/register.js"></script>
+    
+  
+</body>
+</html>
