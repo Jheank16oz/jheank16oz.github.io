@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#004ba0" />
+  <meta name="description" content="App monitoring">
+
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgTs9WuiggGf9glfAyzSXgI96O0kF_N1Q&amp;libraries=geometry"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.9/gmaps.min.js"></script>
+  <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
+
+</head>
+<body >
+
+  <div class="left-align" style="margin-top: 1rem; margin-left: 1rem;">
+    <i class="small material-icons fa ">arrow_back</i>
+  </div>
+  
+  <div class="container">
+
+    <div class="row">
+      <h5>Registro de Monitoreo</h6>
+      <p>Responde las preguntas según el estado de
+        salud correspondiente a cada integrante de la
+        Familia</p>
+
+      <p><strong style="color: black;">Lunes, 23 de Marzo 2020</strong><br>
+        Monitoreo Noche</p>
+    </div>
+    
+    <div class="row">
+      <ul class="collection">
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s4">Valeria</p> 
+          <div class="switch col s8 right-align">
+            <label>
+              Disponible en casa
+              <input checked="" type="checkbox">
+              <span class="lever"></span>
+            </label>
+          </div>
+
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5"></p> 
+          <p class="col s3">
+            <label>
+
+              <span><strong>NO</strong></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              
+              <span><strong>SI</strong></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Fiebre</p> 
+          <p class="col s3">
+            <label>
+              <input name="group1" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group1" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group2" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group2" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group3" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group3" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group4" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group4" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group5" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group5" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group6" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group6" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+
+        <li class="collection-item col s12 valign-wrapper">
+          <p class="col s5">Tos</p> 
+          <p class="col s3">
+            <label>
+              <input name="group7" type="radio" checked />
+              <span></span>
+            </label>
+          </p>
+          <p class="col s3">
+            <label>
+              <input name="group7" type="radio" />
+              <span></span>
+            </label>
+          </p>
+        </li>
+      </ul>
+    </div>
+    
+
+  </div>
+  
+  
+<div class="footer-fixed">
+	<footer class="red lighten-2">
+		<nav class="z-depth-0">
+      <div class="center-align">
+        <a class="waves-effect waves-light btn-small">Realizar monitoreo</a>
+      </div>
+		</nav>
+	</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+</body>
+</html>
