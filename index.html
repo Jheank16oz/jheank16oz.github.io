@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Milestone @jheank16oz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		.intro h1:before {
+			/* Edit this with your name or anything else */
+			content: 'Jhean Carlos Piñeros';
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">DRACO</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li class="active"><a href="#about">About</a></li>
+				        <li><a href="#skills">Blog</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro section" id="about">
+		<div class="container">
+			<p>Hi, I’m Jhean a Mobile Sowftware Developer</p>
+			<div class="units-row units-split wrap">
+				<div class="unit-20">
+					<img src="img/ava.jpg" alt="Avatar">
+				</div>
+				<div class="unit-80">
+					<h1>I live in<br><span id="typed"></span></h1>
+				</div>
+				<p>
+					Since 2016 I have been working in Software Development, specifically in the development of mobile applications, I enjoy what I do and as this can become tangible in our devices, I have surrounded myself with professionals in this sector, and I have taken advantage of the opportunities for improving my skills.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quote -->
+	<div class="quote">
+		<div class="container text-centered">
+			<h1>fighting against myself.</h1>
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+    <script src="js/kube.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+		// Change to edit type effect
+		strings: ["Pereira","Quindio","The Coffee House"],
+
+		typeSpeed:100,backDelay:900,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script>
+</body>
+</html>
