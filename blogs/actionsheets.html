@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Worging With Action Sheets - Jhean Carlos</title>
+    <title>Action Sheets - Jhean Carlos</title>
     <link rel="stylesheet" href="static/bootstrap-3.1.1.min.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700" type="text/css">
     <link rel="stylesheet" href="static/app.css" type="text/css">
@@ -16,13 +16,13 @@
     </header>
 
     <div class="content post">
-      <h2>Worging With Action Sheets</h2>
+      <h2>Action Sheets</h2>
       <p class="date">07 April 2021</p>
       <blockquote>
         <p>Note: This post is part  of "Working with UIKit components"</a>.</p>
       </blockquote>
       <p>
-        An action sheet presents two or more choices related to an intentional user action. On smaller screens, an action sheet slides up from the bottom of the screen; on larger screens, an action sheet appears all at once as a popover.
+      <em>An action sheet presents two or more choices related to an intentional user action. On smaller screens, an action sheet slides up from the bottom of the screen; on larger screens, an action sheet appears all at once as a popover.</em>
       </p>
       <p>
         Notese la frase, <em>"related to an intentional user action"</em>, en principio un action sheet debe utilizarse con el fin de que el usuario ejecute alguna acción esperada.
@@ -33,10 +33,22 @@
         Tambien se menciona <em>"On smaller screens, an action sheet slides up from the bottom of the screen; on larger screens, an action sheet appears all at once as a popover."</em>,
         Es decir que los action sheets están diseñados para pantallas pequeñas y para pantallas mas grandes se debe utilizar un Popover(Alerta,Dialogo)
 
-        Es muy interesante entender esta distinción y se puede ver como apple cuida su linea de diseño ya que inclusive en la documentación de desarrollo
+        Es muy interesante entender esta distinción, y además se puede ver como apple cuida su linea de diseño ya que inclusive en la documentación de desarrollo,
         menciona que esta alerta no está soportada para tvOS y se debe usar  <code data-v-88c637be="">UIAlert<wbr data-v-88c637be="">Controller<wbr data-v-88c637be="">.Style<wbr data-v-88c637be="">.alert</code>
 
       </p>
+
+      <p><em>Use an action sheet — not a menu — to provide choices related to the action people initiated. For example, when people take an action that might destroy data, an action sheet can let them confirm or cancel the action, in addition to providing a Save or other option that acts on the data. Use a context menu if you need to provide items that aren't closely related to the current action.</em></p>
+
+      <p>Los action sheet no son menus y los acciones que impliquen algo importante o que altere la data es escencial presentarlas en Action buttons de tipo destroy, las otras acciones son para ejecutar eventos que no alteran la data pero la involucran. </p>
+      <p>Se deben evitar scrolls ya que entre mas acciones tenga un action sheet mas tiempo y esfuerzo le tomará a las personas seleccionar una opción, para esos escenarios de multiples opciones podemos utilizar <a href="/design/human-interface-guidelines/ios/controls/context-menus/">context menu</a> </p>
+
+      <h3 id="ansi-escape-crash-course">How to use</h3>
+
+      <p>Primero entender que los Action Sheets son un tipo de alerta por lo cual es necesario el uso de  <code>UIAlertController</code></p>
+
+      <script src="https://gist.github.com/Jheank16oz/8ff472f2dbd7a6cc71fd4a1923dafde0.js"></script>
+      <p>Se indica mediante el constructor al UIAlertController que el tipo de alerta es un Action Sheet <code>.actionSheet</code> </p>
 
 
       <p class="signature">— Jhean Carlos</p>
