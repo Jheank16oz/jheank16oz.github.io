@@ -18,7 +18,25 @@
     <div class="content post">
       <h2>Worging With Action Sheets</h2>
       <p class="date">07 April 2021</p>
+      <blockquote>
+        <p>Note: This post is part  of "Working with UIKit components"</a>.</p>
+      </blockquote>
+      <p>
+        An action sheet presents two or more choices related to an intentional user action. On smaller screens, an action sheet slides up from the bottom of the screen; on larger screens, an action sheet appears all at once as a popover.
+      </p>
+      <p>
+        Notese la frase, <em>"related to an intentional user action"</em>, en principio un action sheet debe utilizarse con el fin de que el usuario ejecute alguna acción esperada.
+      </p>
+      <img src="../img/action-sheet1.jpeg" width="288">
+      <p></p>
+      <p>
+        Tambien se menciona <em>"On smaller screens, an action sheet slides up from the bottom of the screen; on larger screens, an action sheet appears all at once as a popover."</em>,
+        Es decir que los action sheets están diseñados para pantallas pequeñas y para pantallas mas grandes se debe utilizar un Popover(Alerta,Dialogo)
 
+        Es muy interesante entender esta distinción y se puede ver como apple cuida su linea de diseño ya que inclusive en la documentación de desarrollo
+        menciona que esta alerta no está soportada para tvOS y se debe usar  <code data-v-88c637be="">UIAlert<wbr data-v-88c637be="">Controller<wbr data-v-88c637be="">.Style<wbr data-v-88c637be="">.alert</code>
+
+      </p>
 
 
       <p class="signature">— Jhean Carlos</p>
