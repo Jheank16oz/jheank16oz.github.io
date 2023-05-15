@@ -28,7 +28,7 @@ The separation of Concerns en español puede traducirse a Separación en respons
 Esta práctica de separación por Asuntos evita recompilaciones innecesarias de partes de nuestro sistema por cambios en otras partes no involucradas directamente.
 
 
-## ¿Cómo se aplica esto en código?
+## ¿Cómo se aplica esto en código? <!-- {docsify-ignore} -->
 
 
 Como explicaba anteriormente el principio de responsabilidad única puede ser aplicado en diferentes contextos, pero el mas común es en el desarrollo de software y especificamente en código.
