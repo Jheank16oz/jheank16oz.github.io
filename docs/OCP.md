@@ -5,8 +5,7 @@
 En 1988 Bertrand Meyer en su libro  Object Oriented Software Construction definió este hermoso principio.
 
 
-Este principio dice que si los módulos en nuestro sistema son extensibles sin necesidad de ser modificados, luego podremos agregar más funcionalidad sin necesidad de modificar código viejo, la idea es diferente de las extensiones que proveen varios lenguajes de programación actuales de agregar funcionalidades a nuestro módulo a través de extensiones para lo cual podríamos decir que si estamos modificando el código viejo aunque no se recompile.
-
+Este principio dice que si los módulos en nuestro sistema son extensibles sin necesidad de ser modificados, luego podremos agregar más funcionalidad sin necesidad de modificar código viejo.
 
 El objetivo es agregar funcionalidad que no modifique el código viejo, lo que permite que las funcionalidades nuevas se introduzcan a través de código nuevo, además permitirá no tener que recompilar el código viejo ya que puede existir en un módulo aislado y las nuevas funcionalidades serán módulos compilados aparte.
 
