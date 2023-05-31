@@ -96,13 +96,14 @@ class ManageObjectToSend {
 ```
 
 
-Sí por alguna razón esperamos que cada caja sea repartida en el orden que llegaron de la primera a la última(FIFO), con este uso de subtype estamos abiertos a un problema si en lugar de un Queue recibimos un Stack ya que podríamos estar repartiendo las cajas cada que lleguen(LIFO).
+Sí por alguna razón esperamos que cada caja sea repartida en el orden que llegaron de la primera a la última(FIFO), con este uso de supertype estamos abiertos a un problema si en lugar de un Queue recibimos un Stack ya que podríamos estar repartiendo las cajas cada que lleguen(LIFO).
 
 
 Este ejemplo también aplica de manera contraria para sistemas que utilizan LIFO en lugar de FIFO, el punto que debemos tener en cuenta es que las subtypes deben limitar su comportamiento al SuperType, cualquier subtype puede comportarse como una supertype sin afectar el sistema.
 
 
-Un meme muy popular ejemplificar este principio:
+Un meme muy popular para ejemplificar este principio:
+
 ![](https://hackernoon.imgix.net/images/rrr2emx.jpg)
 
 
