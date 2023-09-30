@@ -18,13 +18,10 @@ Esta solución es ampliamente utilizada en los sistemas de código actuales y po
 
 Una de las razones principales de este  principio es evitar depender de funcionalidades para probar nuestro código y poder simular diferentes estados de esa dependencia para así concentrarnos netamente en la lógica de negocio.
 
-Por ejemplo, Imaginemos 
-wip
-wip
-wip
-wip
-WIP
-˝
-To be continue ...
+Es decir si nuestra clase A depende de la clase B para realizar sus funcionalidades, deberiamos poder pasarle cualquier tipo de B, este principio tambien aplica por ejemplo para casos donde nuestras clases importan librerias y la misma no puede ser remplazada facilmente entonces se crea cohesión, una buena forma de trazar si hay cohesión es revisar que importaciones tiene nuestro módulo o clase, si contiene packages de otros módulos, estamos violando este principio.
+
+
+
+
 
 
