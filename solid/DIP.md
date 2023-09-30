@@ -1,27 +1,15 @@
-# Dependency Inversion Principle (DIP)
+# Principio de Inversión de Dependencias (DIP)
+El Principio de Inversión de Dependencias establece que los módulos de alto nivel no deben estar directamente ligados a los módulos de bajo nivel.
 
-El principio de inversión de dependencias dice que los módulos de alto nivel no deben depender de módulos de bajo nivel.
+¿Por qué evitar depender de módulos de bajo nivel?
+Cuando hablamos de módulos de alto nivel, nos referimos a la capa de lógica de negocio que no suele cambiar con frecuencia. Un ejemplo de esto es evitar la dependencia directa de frameworks para las funcionalidades de alto nivel.
 
-# ¿Porque no depender de módulos de bajo nivel?
+## ¿Cómo evitar la dependencia de un módulo de bajo nivel?
+Para evitar esta dependencia, es fundamental identificar qué corresponde a la lógica de negocio y qué no. Esto nos permitirá trasladar las partes no relacionadas con la lógica de negocio a una capa externa. En esta capa o módulo externo, podemos definir una interfaz o abstracción que actúe como puente entre nuestra lógica de negocio y el módulo externo.
 
-Cuando nos referimos a módulos de alto nivel, nos referimos a esa capa de Lógica de negocio que sabemos que no va a cambiar facilmente.
+Esta solución es ampliamente utilizada en los sistemas de código actuales, y muchas empresas adoptan una arquitectura que incluye un módulo llamado "Core", que contiene toda la lógica de negocio, abstracciones e interfaces. Luego, se crea un módulo diferente que contiene la implementación de esas interfaces o abstracciones.
 
-Así mismo se puede tomar como ejemplo no depender de Frameworks para las funcionalidades de alto nivel.
+## ¿Cómo se aplica este principio de manera más específica en el código?
+Uno de los principales objetivos de este principio es evitar depender de funcionalidades concretas para probar nuestro código y permitir la simulación de diferentes estados de esas dependencias. De esta manera, podemos enfocarnos exclusivamente en la lógica de negocio.
 
-# ¿Cómo podemos evitar depender de un módulo de bajo nivel?
-
-Primeramente debemos identificar que corresponde a lógica de negocio y que no, esto nos permitirá saber que podemos trasladar a una capa externa, para esta capa o módulo externo podemos definir una Interface o Abstracción que sea puente entre nuestra lógica de negocion y el módulo externo.
-
-Esta solución es ampliamente utilizada en los sistemas de código actuales y por ende muchas empresas adoptan una arquitectura donde poseen un módulo llamado **Core** el cual contiene toda esa lógica de negocio, Abstracciones e Interfaces para posterior crear un módulo diferente que contenga la implementación de esas Interfaces o Abstracciones.
-
-# ¿Cómo aplica este principio en código mas especifico?
-
-Una de las razones principales de este  principio es evitar depender de funcionalidades para probar nuestro código y poder simular diferentes estados de esa dependencia para así concentrarnos netamente en la lógica de negocio.
-
-Es decir si nuestra clase A depende de la clase B para realizar sus funcionalidades, deberiamos poder pasarle cualquier tipo de B, este principio tambien aplica por ejemplo para casos donde nuestras clases importan librerias y la misma no puede ser remplazada facilmente entonces se crea cohesión, una buena forma de trazar si hay cohesión es revisar que importaciones tiene nuestro módulo o clase, si contiene packages de otros módulos, estamos violando este principio.
-
-
-
-
-
-
+En otras palabras, si una clase A depende de la clase B para realizar sus funciones, deberíamos poder proporcionar cualquier tipo de B como dependencia. Este principio también es relevante en casos donde nuestras clases importan bibliotecas que no pueden ser reemplazadas fácilmente. En tales casos, se crea una cohesión que se puede evaluar examinando las importaciones de nuestro módulo o clase. Si contiene paquetes de otros módulos, estamos incumpliendo este principio.

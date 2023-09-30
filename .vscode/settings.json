@@ -1,3 +1,4 @@
 {
-    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"
+    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "cSpell.language": "en,es,es-ES,lorem,en-US,en-GB"
 }
