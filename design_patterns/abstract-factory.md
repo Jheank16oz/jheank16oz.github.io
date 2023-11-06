@@ -14,3 +14,18 @@ Podemos solventar este problema definiendo una clase WidgetFactory abstracta que
 <img src="./../img/relationships-widget-factory.png">
 
 Existe una subclase concreta de WidgetFactory para cada estándar de look-and-feel. Cada subclase implementa las operaciones para crear los widgets apropiados para el look-and-feel. Por ejemplo, la operación `CreateScrollBar` en el `MotifWidgetFactory` instancia y retorna un Motif scroll bar, mientras la operación correspondiente en el PMWidgetFactory retorna un scroll bar para Presentation Manager. Los Clientes crean los widgets solo a través de la interface WidgetFactory y no tienen conocimiento de las clases que implementan los widgets para un particular look and feel.
+
+* **AbstractFactory** (Widget Factory)
+- Declara una interface para operaciones que crean objetos de productos abstractos.
+* **ConcreteFactory** (MotifWidgetFactory, PMWidgetFactory)
+- implementa las operaciones para crearobjetos de producto concretos.
+* **AbstractProduct** (Window,ScrollBar)
+- Declara una interface para un tipo de objeto de roducto.
+* **ConcreteProduct** (MotifWindow,MotifScrollBar)
+- Define un objeto de producto para ser creado por la correspondiente ConcreteFactory.
+- Implementa la interface AbstractProduct.
+* **Client**
+- Usa solo interfaces declaradas por clases AbstractFactory y AbstractProduct.
+
+## Colaboraciones
+* Normalmente una única instancia de una clase de ConcreteFactory crea objetos de producto que tienen una implementación particular. Para crear diferentes objetos de producto,los clientes deben usar diferentes ConcreteFactory.
