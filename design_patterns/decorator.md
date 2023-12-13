@@ -167,6 +167,42 @@ window->SetContents(
 Ya que `Window` acede a su contenido a traves de la interface del  `VisualComponent`, no es consciente de la presencia del decorador. Se puede rastrear el text view si se necesita interactuar con el directamente, por ejemplo, cuando se necesite invocar operaciones que no son parte de la interface  `VisualComponent`. Los clientes que dependen de la identidad del componente también deberían referirse a él directamente.
 
 ## Usos Conocidos
-Muchas herramientas de interfaces de usuario que son object-oriented para agregar adornos a widgets. Ejemplos incluidos en entrevistas 
+Muchas herramientas de interfaces de usuario que son object-oriented para agregar adornos a widgets. Ejemplos incluidos en entrevistas [LVC89, LCI+92], ET++ [WGM88], y la librería de clase ObjectWorks\Smalltalk [Par90]. Aplicaciones mas exóticas  de Decorator son DebuggingGlyph de entrevistas y el PassivityWrapper de Smalltalk ParcPlace. Un DebuggingGlyph imprime información depurada antes y después de reenviar una solicitud de layout a sus componentes. Esta información de traza puede ser usada para analizar y depurar el comportamiento del layout de objetos e composiciones complejas. El PassivityWrapper puede habilitar o deshabilitar interacciones de usuario en el componente.
+
+Pero el patrón Decorador no se limita de ninguna manera a las interfaces de usuario, como el siguiente ejemplo (basado en las classes de streaming ET++ [WGM88]) lo ilustra.
+
+Los Streams son una abstracción fundamental en instalaciones I/O. Un stream puede proveer una interfaz para convertir objetos en una secuencia de bytes o caracteres. Esto nos permite transformar un objeto en un archivo o un string en memoria para obtener luego. Un camino sencillo para realizar esto es definir un clase abstracta Stream con las subclasses MemoryStream y FileStream. Pero supongamos que también queremos poder hacer lo siguiente:
+
+* Comprimir la data del stream usando diferentes algoritmos de compresión (encodeado run-length, Lempbel-Ziv, etc.).
+* Reducir la data del stream a caracteres ASCII 7-bit para que pueda ser transmitida arriba de un canal  de comunicación ASCII.
+
+El patrón Decorador nos facilita un elegante camino para agregar estas responsabilidades a streams. El diagrama de abajo muestra una solución a el problema:
+
+<img src="./../img/decorator-diagram-stream.png"/>
+
+La clase abstracta Stream mantiene un buffer interno y provee operaciones para almacenar data dentro del Stream(PutInt, PutString). Cuando el buffer está completo, Stream llama la operación abstracta HandleBufferFull, la cual hace la transferencia actual de data. La versión FileStream de esta operación sobrescribe esta operación para transferir el buffer a un archivo.
+
+La clase clave aquí es StreamDecorator, la cual mantiene una referencia al componente stream y reenvía la solicitud a este. Las subclases StreamDecorator sobrescriben HandleBufferFull y ejecutan acciones adicionales andes de llamar la operación HandleBufferFull de StreamDecorator.
+
+Por ejemplo, la subclase CompressingStream comprime la data, y el ASCII7Stream convierte la data en ASCII 7-bit. Ahora, para crear un FileStream que comprime esta data y convierte el binario de data a ASCII 7-bit, podemos decorar un FileStream con CompressingStream y ASCII7Stream:
+
+```cpp
+Stream* aStream = new CompressingStream(
+    new ASCII7Stream(
+        new FileStream("aFileName")
+    )
+);
+aStream->PutInt(12);
+aStream->PutString("aString");
+```
+
+## Patrones Relacionados
+Adapter: Un decorador es diferente de un adapter en que el decorador solo cambia las  responsabilidades de un objeto, no su interface; un adapter provee a un objeto una interface completamente nueva.
+
+Composite: Un decorador puede ser considerado como un compuesto degenerado con solo un componente. Sin embargo, un decorador agrega responsabilidades adicionales - Su intención es la agregación a un objeto.
+
+Strategy: Un decorado permite cambiar la piel de un objeto; una estrategia permite cambiar los componentes internos. Estos son dos caminos alternativos para cambiar un objeto.
+
+
 
 
