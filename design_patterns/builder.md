@@ -70,12 +70,11 @@ class TextConverter {
         return asciiText
     }
 }
-
+// Text Representation
 class SwiftUITextConverter: TextConverter {
-    
     private var suText = Text(String())
     
-    override func convertText(text:NSAttributedString) {
+    override func convertText(text: NSAttributedString) {
         let attributed = AttributedString(text)
         suText = Text(attributed)
     }
@@ -85,6 +84,7 @@ class SwiftUITextConverter: TextConverter {
     }
 }
 ```
+
 * Director
 ```swift
 // Este director en concreto es para leer un archivo RTF en el bundle de a app

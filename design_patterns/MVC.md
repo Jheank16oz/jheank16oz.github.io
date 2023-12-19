@@ -1,5 +1,5 @@
 # Model View Controller (MVC)
-El patrón de diseño Modelo-Vista-Controlador (MVC) es quizás uno de los más reconocidos en el desarrollo de software, y es probable que la mayoría de nosotros hayamos escuchado hablar de él al menos una vez. Aquellos con más experiencia a menudo asumimos que comprendemos completamente su funcionamiento y su esencia. Sin embargo, al leer el libro "Design Patterns," me he dado cuenta de que existen fundamentos que en la actualidad no se aplican por completo.
+El patrón de diseño Modelo-Vista-Controlador (MVC) es quizás uno de los más reconocidos en el desarrollo de software, y es probable que la mayoría de nosotros hayamos escuchado hablar de él al menos una vez. En ocasiones asumimos que comprendemos su funcionamiento y su esencia. Sin embargo, al leer el libro "Design Patterns," me he dado cuenta de que existen fundamentos que en la actualidad no se aplican por completo.
 
 Me dí a la tarea de traducir y ordenar las partes que mas me interesaron para también facilitar su entendimiento con algunas practicas en código.
 
@@ -20,7 +20,7 @@ En el pasado, estos objetos solían estar juntos en los diseños de interfaces, 
 Se establece un protocolo subscribe/notify entre ellos
 
 ## Características claves
-Con el fin de que sea mas practico para cada característica he creado un código de ejemplo utilizando Swift.
+Con el fin de que sea mas práctico para cada característica he creado un código de ejemplo utilizando Swift.
 
 * El **Modelo** notifica a las vistas dependientes si hay un cambio
   ```swift
@@ -28,11 +28,11 @@ Con el fin de que sea mas practico para cada característica he creado un códig
   /*
     Para este caso utilicé un observable object para que así se notifique a las vistas suscritas a este modelo.
   */
-  class FaceValue:ObservableObject, Identifiable {
+  class FaceValue: ObservableObject, Identifiable {
       let id = UUID()
-      @Published var a:Double
-      @Published var b:Double
-      @Published var c:Double
+      @Published var a: Double
+      @Published var b: Double
+      @Published var c: Double
 
       init(a: Double, b: Double, c: Double) {
           self.a = a
@@ -46,10 +46,11 @@ Con el fin de que sea mas practico para cada característica he creado un códig
   /*
     Creé tres vistas distintas a las cuales anclé el mismo modelo de la siguiente forma
   */
-  @ObservedObject internal var model:FaceValue
+  @ObservedObject internal var model: FaceValue
   ```
 
 * Permite crear diferentes vistas sin necesidad de recrear el Modelo
   
 
 // WIP
+// ...

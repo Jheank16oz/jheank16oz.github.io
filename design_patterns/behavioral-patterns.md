@@ -1,1 +1,14 @@
-# WIP!!!!!!
+# Patrones de Comportamiento
+
+Los patrones de comportamiento se preocupan de los algoritmos y la asignación de responsabilidades entre objetos. Los patrones de comportamiento describen no solo patrones de objetos o clases, también los patrones de comunicación entre ellos. Estos patrones caracterizan un flujo de control complejo que es difícil de seguir en tiempo de ejecución. Cambian el enfoque lejos del control de flujo a concentrarse solo en la forma en que los objetos están interconectados.
+
+Las clases de comportamiento usan herencia para distribuir comportamiento entre clases. Este capitulo incluye dos  tipos de patrones.
+Template Method es el mas simple y mas común de los dos. Un template method es una definición abstracta de un algoritmo. Este define el algoritmo paso a paso. Cada paso invoca una operación abstracta o una operación primitiva. Una subclase desarrolla el algoritmo definiendo las operaciones abstractas. La otra clase de comportamiento es Interpreter, el cual representa una gramática como jerarquía e implementa un interpreter como una operación o instancia de estas clases.
+
+Los patrones de objetos de comportamiento usan composición en lugar de herencia. Algunos describen como un grupo de pares de objetos cooperan para realizar una tarea que un objeto solo no puede llevar a cabo por si mismo. Un importante problema aquí es como este para de objetos conoce acerca del otro. Las parejas pueden mantener referencias explicitas de cada uno, pero esto incrementa su acoplamiento. En el extremo, cada objeto sabría de todos los demás. El patrón Mediator evita esto introduciendo un objeto mediador entre parejas. El mediador proporciona la dirección necesaria para el acoplamiento suelto.
+
+El patrón Chain of Responsibility proporciona un acoplamiento aún más suelto. Esto permite enviar solicitudes a un objeto implícitamente a través de una cadena de objetos candidatos. Cualquier candidato podría cumplir la solicitud dependiendo de las condiciones en tiempo de ejecución. El número de candidatos es ilimitado, y se puede seleccionar cual candidato participa en la cadena en tiempo de ejecución.
+
+El patrón Observer define y mantiene una dependencia entre objetos. El ejemplo clásico de Observer está en Smalltalk con Model/View/Controller, donde todas las vistas del modelo son notificadas cada vez que el estado del modelo cambia.
+
+Otros patrones de objetos de comportamiento están concentrados en  encapsular el comportamiento en un objeto y delegar solicitudes en él. El patrón Strategy encapsula un algoritmo en un objeto. El Strategy hace fácil especificar y cambiar el algoritmo que un objeto usa. El patrón Command encapsula una solicitud en un objeto entonces este puede ser pasado como un parámetro, almacenado sobre un lista de historial, o manipulado de otras maneras. El patrón State encapsula los estados de un objeto entonces el objeto puede cambiar su comportamiento cuando su objeto de estado cambia. El patrón Visitor encapsula comportamientos que podrían de otra forma ser distribuidos a través de clases, y Iterator abstrae la forma que se accede y recorre objetos en un agregado.
