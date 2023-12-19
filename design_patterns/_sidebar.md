@@ -9,3 +9,6 @@
   
   - [Composite](composite.md)
   - [Decorator](decorator.md)
+
+- [Behavioral Patterns](behavioral-patterns.md)
+  - [Strategy](strategy.md)
